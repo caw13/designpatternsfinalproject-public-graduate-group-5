@@ -1,13 +1,14 @@
 package edu.ccsu.devices;
 
-import edu.ccsu.interfaces.Sensor;
+import edu.ccsu.interfaces.Device;
 /**
  * Class allows for operations on GrovePi LEDs.
  */
-public class Led implements Sensor {
+public class Led implements Device {
 
-	private Sensor nextSensor;
 	private int brightness;
+	private String name;
+	private Device nextDevice;
 	
 	public Led() {
 		
@@ -26,20 +27,36 @@ public class Led implements Sensor {
 	}
 	
 	@Override
-	public String getData() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public String getData(int seconds) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void setSensor(Sensor nextSensor) {
+	public void setDevice(Device nextDevice) {
 		// TODO Auto-generated method stub
 		
 	}
+
+	public Device getNextDevice() {
+		return nextDevice;
+	}
+
+	@Override
+	public boolean isAvailable(Device device, String portNumber) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public int getBrightness() {
+		return brightness;
+	}
+
+	public void setBrightness(int brightness) {
+		this.brightness = brightness;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	//TODO implement object equality and hashCode
 }

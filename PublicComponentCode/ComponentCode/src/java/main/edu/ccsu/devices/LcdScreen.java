@@ -2,15 +2,19 @@ package edu.ccsu.devices;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import edu.ccsu.interfaces.Device;
 /**
  * Class connects to LCD RGB Backlight and allows
  * calling classes to print messages to the screen using
  * a variety of methods.  It maintains a list of messages 
  */
-public class LcdScreen {
+public class LcdScreen implements Device {
 
 	private List<String> messages;
 	private String color;
+	private String name;
+	private Device nextDevice;
 	
 	public LcdScreen(String color) {
 		this.messages = new ArrayList<String>();
@@ -34,4 +38,44 @@ public class LcdScreen {
 	public void printMessage(String message, int duration) {
 		//TODO implementation
 	}
+
+	@Override
+	public void setDevice(Device nextDevice) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public boolean isAvailable(Device device, String portNumber) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	public Device getNextDevice() {
+		return nextDevice;
+	}
+
+	public List<String> getMessages() {
+		return messages;
+	}
+
+	public void setMessages(List<String> messages) {
+		this.messages = messages;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	//TODO implement object equality and hashCode
 }

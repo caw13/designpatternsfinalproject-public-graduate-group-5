@@ -1,5 +1,9 @@
 package edu.ccsu.interfaces;
-
+/**
+ * 
+ * @author Adrian
+ *
+ */
 public interface Sensor {
 
 	/**
@@ -18,8 +22,16 @@ public interface Sensor {
 	public String getData(int seconds);
 	
 	/**
-	 * 
+	 * Set next sensor to use in case of
+	 * current sensor throwing error or failing.
 	 * @param nextSensor
 	 */
 	public void setSensor(Sensor nextSensor);
+	
+	/**
+	 * Check if sensor is available
+	 * @param sensor
+	 * @return
+	 */
+	public boolean isAvailable(Sensor sensor);
 }
