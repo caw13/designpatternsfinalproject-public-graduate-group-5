@@ -6,14 +6,12 @@ import edu.ccsu.interfaces.Device;
  */
 public class Led extends Device {
 
-	private int brightness;
-
-	/*
-	 * constructor
-	 * */
-
-	public Led() {
-		
+	/**
+	 * 
+	 * @param name
+	 */
+	public Led(String name) {
+		this.name = name;
 	}
 
 	public void turnOn() {
@@ -43,21 +41,18 @@ public class Led extends Device {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
-	/**
-	 * 
-	 * @return
-	 */
-	public int getBrightness() {
-		return brightness;
+	
+	@Override
+	public void adjustBrightness(int brightness) {
+		// TODO Auto-generated method stub
+		
 	}
-
-	/**
-	 * 
-	 * @param brightness
-	 */
-	public void setBrightness(int brightness) {
-		this.brightness = brightness;
+	
+	@Override
+	public String toString() {
+		return "Name: " + this.name;
 	}
 	//TODO implement object equality and hashCode
+
+	
 }

@@ -7,6 +7,8 @@ public abstract class Device {
 	protected String name;
 	protected Device nextDevice;
 	protected String portNumber;
+	protected String color;
+	protected int brightness;
 	
 	/**
 	 * Sets another devices to be used in Chain of Responsiblity.
@@ -19,13 +21,26 @@ public abstract class Device {
 	public abstract void setNextDevice(Device nextDevice, String portNumber);
 	
 	/**
-	 * Given a device and port number, checks to see if device
+	 * Given a device and port number, checks to see if devices
 	 * is available for use.
 	 * @param device
 	 * @param portNumber
 	 * @return
 	 */
 	public abstract boolean isAvailable(Device device, String portNumber);
+	
+	/**
+	 *
+	 * @param brightness
+	 * @return
+	 */
+	public abstract void adjustBrightness(int brightness);
+	
+	/**
+	 * 
+	 * @param numberOfSeconds
+	 */
+	public abstract void blink(int numberOfSeconds);
 	
 	/**
 	 * 
@@ -50,7 +65,39 @@ public abstract class Device {
 	public void setPortNumber(String portNumber) {
 		this.portNumber = portNumber;
 	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public String getColor() {
+		return color;
+	}
 
+	/**
+	 * 
+	 * @param color
+	 */
+	public void setColor(String color) {
+		this.color = color;
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public int getBrightness() {
+		return brightness;
+	}
+
+	/**
+	 * 
+	 * @param brightness
+	 */
+	public void setBrightness(int brightness) {
+		this.brightness = brightness;
+	}
+	
 	/**
 	 * 
 	 * @return

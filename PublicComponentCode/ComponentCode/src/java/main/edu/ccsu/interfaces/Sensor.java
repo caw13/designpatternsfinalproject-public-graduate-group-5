@@ -9,9 +9,10 @@ public interface Sensor {
 	/**
 	 * Returns a string representation of sensor data
 	 * for the current moment
+	 * @param desiredData
 	 * @return
 	 */
-	public String getData();
+	public String getData(String desiredData);
 	
 	/**
 	 * Returns a string representation of data for a sensor
@@ -36,4 +37,17 @@ public interface Sensor {
 	 * @return
 	 */
 	public boolean isAvailable(Sensor sensor, String portNumber);
+
+	/**
+	 * Returns port number of Sensor
+	 * @return
+	 */
+	public String getPortNumber();
+
+	/**
+	 * Set port number of Sensor
+	 * @param portNumber
+	 */
+	public void setPortNumber(String portNumber);
+	
 }

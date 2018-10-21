@@ -8,8 +8,12 @@ public class LightSensor implements Sensor {
 	private String name;
 	private String portNumber;
 	
+	public LightSensor(String name) {
+		this.name = name;
+	}
+	
 	@Override
-	public String getData() {
+	public String getData(String desiredData) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -78,6 +82,11 @@ public class LightSensor implements Sensor {
 	 */
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	@Override
+	public String toString() {
+		return "Name: " + this.name;
 	}
 	//TODO implement object equality and hashCode
 }

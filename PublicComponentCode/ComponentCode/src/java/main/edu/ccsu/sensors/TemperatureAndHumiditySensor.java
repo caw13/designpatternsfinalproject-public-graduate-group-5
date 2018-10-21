@@ -8,9 +8,18 @@ public class TemperatureAndHumiditySensor implements Sensor {
 	private double degreesFahrenheit;
 	private double humidityValue;
 	private String portNumber; 
+	private String name;
+	
+	public TemperatureAndHumiditySensor(String name) {
+		this.name = name;
+		//should be set defaults???
+	}
 	
 	@Override
-	public String getData() {
+	public String getData(String desiredData) {
+		//if user just wants humidity only get that
+		//if user just wants temp just get that
+		//if user wants both grab both 
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -31,7 +40,7 @@ public class TemperatureAndHumiditySensor implements Sensor {
 	 * Returns the next sensor in the chain 
 	 * @return
 	 */
-	public Sensor getNextSensor() {
+	private Sensor getNextSensor() {
 		return nextSensor;
 	}
 
@@ -45,6 +54,7 @@ public class TemperatureAndHumiditySensor implements Sensor {
 	 * 
 	 * @return
 	 */
+	@Override
 	public String getPortNumber() {
 		return portNumber;
 	}
@@ -53,42 +63,14 @@ public class TemperatureAndHumiditySensor implements Sensor {
 	 * 
 	 * @param portNumber
 	 */
+	@Override
 	public void setPortNumber(String portNumber) {
 		this.portNumber = portNumber;
 	}
 
-	/**
-	 * 
-	 * @return
-	 */
-	public double getDegreesFahrenheit() {
-		return degreesFahrenheit;
+	@Override
+	public String toString() {
+		return "Name: " + this.name;
 	}
-
-	/**
-	 * 
-	 * @param degreesFahrenheit
-	 */
-	public void setDegreesFahrenheit(double degreesFahrenheit) {
-		this.degreesFahrenheit = degreesFahrenheit;
-	}
-
-	/**
-	 * 
-	 * @return
-	 */
-	public double getHumidityValue() {
-		return humidityValue;
-	}
-
-	/**
-	 * 
-	 * @param humidityValue
-	 */
-	public void setHumidityValue(double humidityValue) {
-		this.humidityValue = humidityValue;
-	}
-
-	
 	//TODO implement object equality and hashCode
 }

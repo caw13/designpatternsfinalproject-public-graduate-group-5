@@ -9,15 +9,17 @@ public interface ProductFactory {
 
 	/**
 	 * Creates a device based on the name and returns it
-	 * @param deviceName
+	 * @param device
+	 * @param name
 	 * @return
 	 */
-	public Device makeDevice(String deviceName);
+	public Device makeDevice(String device, String name);
 	
 	/**
 	 * Creates a sensor based on the name and returns it
-	 * @param sensorName
+	 * @param sensor
+	 * @param name
 	 * @return
 	 */
-	public Sensor makeSensor(String sensorName);
+	public Sensor makeSensor(String sensor, String name);
 }
