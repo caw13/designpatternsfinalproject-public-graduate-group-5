@@ -4,16 +4,23 @@ import edu.ccsu.interfaces.Device;
 /**
  * Class allows for operations on GrovePi LEDs.
  */
-public class Led implements Device {
+public class Led extends Device {
 
 	private int brightness;
 	private String name;
 	private Device nextDevice;
-	
+
+
+	/*
+	 * constructor
+	 * */
+
 	public Led() {
 		
 	}
 	
+	 
+
 	public void turnOn() {
 		//TODO implementation
 	}

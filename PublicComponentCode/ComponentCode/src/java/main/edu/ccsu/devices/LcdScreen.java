@@ -9,7 +9,7 @@ import edu.ccsu.interfaces.Device;
  * calling classes to print messages to the screen using
  * a variety of methods.  It maintains a list of messages 
  */
-public class LcdScreen implements Device {
+public class LcdScreen extends Device {
 
 	private List<String> messages;
 	private String color;
