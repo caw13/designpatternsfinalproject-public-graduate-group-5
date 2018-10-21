@@ -6,6 +6,7 @@ public class LightSensor implements Sensor {
 
 	private Sensor nextSensor;
 	private String name;
+	private String portNumber;
 	
 	@Override
 	public String getData() {
@@ -20,32 +21,63 @@ public class LightSensor implements Sensor {
 	}
 
 	@Override
-	public void setSensor(Sensor nextSensor) {
+	public void setNextSensor(Sensor nextSensor, String portNumber) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public boolean isAvailable(Sensor sensor) {
+	public boolean isAvailable(Sensor sensor, String portNumber) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
+	public String getPortNumber() {
+		return portNumber;
+	}
+	
+	/**
+	 * 
+	 * @param portNumber
+	 */
+	public void setPortNumber(String portNumber) {
+		this.portNumber = portNumber;
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
 	public Sensor getNextSensor() {
 		return nextSensor;
 	}
 
+	/**
+	 * 
+	 * @param nextSensor
+	 */
 	public void setNextSensor(Sensor nextSensor) {
 		this.nextSensor = nextSensor;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * 
+	 * @param name
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
-	
 	//TODO implement object equality and hashCode
 }

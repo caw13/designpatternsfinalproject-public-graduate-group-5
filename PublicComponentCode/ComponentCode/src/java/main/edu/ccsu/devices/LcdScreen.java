@@ -15,6 +15,7 @@ public class LcdScreen implements Device {
 	private String color;
 	private String name;
 	private Device nextDevice;
+	private String portNumber;
 	
 	public LcdScreen(String color) {
 		this.messages = new ArrayList<String>();
@@ -40,7 +41,7 @@ public class LcdScreen implements Device {
 	}
 
 	@Override
-	public void setDevice(Device nextDevice) {
+	public void setNextDevice(Device nextDevice, String portNumber) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -50,30 +51,74 @@ public class LcdScreen implements Device {
 		return false;
 	}
 	
+	/**
+	 * 
+	 * @return
+	 */
+	public String getPortNumber() {
+		return portNumber;
+	}
+
+	/**
+	 * 
+	 * @param portNumber
+	 */
+	public void setPortNumber(String portNumber) {
+		this.portNumber = portNumber;
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
 	public Device getNextDevice() {
 		return nextDevice;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public List<String> getMessages() {
 		return messages;
 	}
 
+	/**
+	 * 
+	 * @param messages
+	 */
 	public void setMessages(List<String> messages) {
 		this.messages = messages;
 	}
-
+	
+	/**
+	 * 
+	 * @return
+	 */
 	public String getColor() {
 		return color;
 	}
 
+	/**
+	 * 
+	 * @param color
+	 */
 	public void setColor(String color) {
 		this.color = color;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * 
+	 * @param name
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
