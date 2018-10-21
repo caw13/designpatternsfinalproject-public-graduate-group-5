@@ -22,16 +22,24 @@ public class Led implements Device {
 		//TODO implementation
 	}
 	
+	/**
+	 * 
+	 * @param numberOfSeconds
+	 */
 	public void blink(int numberOfSeconds) {
 		//TODO implementation
 	}
 	
 	@Override
-	public void setDevice(Device nextDevice) {
+	public void setNextDevice(Device nextDevice, String portNumber) {
 		// TODO Auto-generated method stub
 		
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public Device getNextDevice() {
 		return nextDevice;
 	}
@@ -42,18 +50,34 @@ public class Led implements Device {
 		return false;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public int getBrightness() {
 		return brightness;
 	}
 
+	/**
+	 * 
+	 * @param brightness
+	 */
 	public void setBrightness(int brightness) {
 		this.brightness = brightness;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * 
+	 * @param name
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}

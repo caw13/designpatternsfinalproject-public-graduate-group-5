@@ -6,7 +6,8 @@ public class TemperatureAndHumiditySensor implements Sensor {
 
 	private Sensor nextSensor;
 	private double degreesFahrenheit;
-	public double humidityValue;
+	private double humidityValue;
+	private String portNumber; 
 	
 	@Override
 	public String getData() {
@@ -21,25 +22,9 @@ public class TemperatureAndHumiditySensor implements Sensor {
 	}
 
 	@Override
-	public void setSensor(Sensor nextSensor) {
+	public void setNextSensor(Sensor nextSensor, String portNumber) {
 		// TODO Auto-generated method stub
 		
-	}
-
-	public double getDegreesFahrenheit() {
-		return degreesFahrenheit;
-	}
-
-	public void setDegreesFahrenheit(double degreesFahrenheit) {
-		this.degreesFahrenheit = degreesFahrenheit;
-	}
-
-	public double getHumidityValue() {
-		return humidityValue;
-	}
-
-	public void setHumidityValue(double humidityValue) {
-		this.humidityValue = humidityValue;
 	}
 
 	/**
@@ -51,9 +36,59 @@ public class TemperatureAndHumiditySensor implements Sensor {
 	}
 
 	@Override
-	public boolean isAvailable(Sensor sensor) {
+	public boolean isAvailable(Sensor sensor, String portNumber) {
 		// TODO Auto-generated method stub
 		return false;
 	}	
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public String getPortNumber() {
+		return portNumber;
+	}
+
+	/**
+	 * 
+	 * @param portNumber
+	 */
+	public void setPortNumber(String portNumber) {
+		this.portNumber = portNumber;
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	public double getDegreesFahrenheit() {
+		return degreesFahrenheit;
+	}
+
+	/**
+	 * 
+	 * @param degreesFahrenheit
+	 */
+	public void setDegreesFahrenheit(double degreesFahrenheit) {
+		this.degreesFahrenheit = degreesFahrenheit;
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	public double getHumidityValue() {
+		return humidityValue;
+	}
+
+	/**
+	 * 
+	 * @param humidityValue
+	 */
+	public void setHumidityValue(double humidityValue) {
+		this.humidityValue = humidityValue;
+	}
+
+	
 	//TODO implement object equality and hashCode
 }

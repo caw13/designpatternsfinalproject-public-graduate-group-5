@@ -9,8 +9,9 @@ public interface Device {
 	 * If accessing current device fails and there is another device in the chain,
 	 * device will try to use that next device to perform operations.
 	 * @param device
+	 * @param portNumber
 	 */
-	public void setDevice(Device nextDevice);
+	public void setNextDevice(Device nextDevice, String portNumber);
 	
 	/**
 	 * Given a device and port number, checks to see if device
