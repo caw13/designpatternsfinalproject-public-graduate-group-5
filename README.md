@@ -1,7 +1,7 @@
 README
 
 *** Kim Niehaus, Ga Young Lee, Adrian Ward-Manthey (Group 5)
-***The functionality we will be providing and how other groups can use it****
+***The functionality we will be providing and how other groups can use it***
 
 The interface provided will allow users to interact with the sensors without having to use GrovePi API, allowing the user to work strictly with Java code.
 
