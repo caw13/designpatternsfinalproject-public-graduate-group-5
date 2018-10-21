@@ -7,9 +7,6 @@ import edu.ccsu.interfaces.Device;
 public class Led extends Device {
 
 	private int brightness;
-	private String name;
-	private Device nextDevice;
-
 
 	/*
 	 * constructor
@@ -18,8 +15,6 @@ public class Led extends Device {
 	public Led() {
 		
 	}
-	
-	 
 
 	public void turnOn() {
 		//TODO implementation
@@ -43,14 +38,6 @@ public class Led extends Device {
 		
 	}
 
-	/**
-	 * 
-	 * @return
-	 */
-	public Device getNextDevice() {
-		return nextDevice;
-	}
-
 	@Override
 	public boolean isAvailable(Device device, String portNumber) {
 		// TODO Auto-generated method stub
@@ -72,22 +59,5 @@ public class Led extends Device {
 	public void setBrightness(int brightness) {
 		this.brightness = brightness;
 	}
-
-	/**
-	 * 
-	 * @return
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * 
-	 * @param name
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
-	
 	//TODO implement object equality and hashCode
 }

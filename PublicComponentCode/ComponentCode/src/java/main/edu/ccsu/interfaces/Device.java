@@ -4,9 +4,9 @@ package edu.ccsu.interfaces;
  */
 public abstract class Device {
 
-	private String name;
-	private Device nextDevice;
-	private String portNumber;
+	protected String name;
+	protected Device nextDevice;
+	protected String portNumber;
 	
 	/**
 	 * Sets another devices to be used in Chain of Responsiblity.
@@ -14,8 +14,9 @@ public abstract class Device {
 	 * device will try to use that next device to perform operations.
 	 * @param device
 	 * @param portNumber
+	 * @return 
 	 */
-	public void abstract setNextDevice(Device nextDevice, String portNumber);
+	public abstract void setNextDevice(Device nextDevice, String portNumber);
 	
 	/**
 	 * Given a device and port number, checks to see if device
@@ -24,5 +25,37 @@ public abstract class Device {
 	 * @param portNumber
 	 * @return
 	 */
-	public boolean abstract isAvailable(Device device, String portNumber);
+	public abstract boolean isAvailable(Device device, String portNumber);
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * 
+	 * @param name
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPortNumber() {
+		return portNumber;
+	}
+
+	public void setPortNumber(String portNumber) {
+		this.portNumber = portNumber;
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	public Device getNextDevice() {
+		return nextDevice;
+	}
 }

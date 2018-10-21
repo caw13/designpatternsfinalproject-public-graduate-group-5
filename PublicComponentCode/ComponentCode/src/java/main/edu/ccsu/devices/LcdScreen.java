@@ -13,13 +13,11 @@ public class LcdScreen extends Device {
 
 	private List<String> messages;
 	private String color;
-	private String name;
-	private Device nextDevice;
-	private String portNumber;
 	
 	public LcdScreen(String color) {
 		this.messages = new ArrayList<String>();
-		this.color = color;
+		this.color = "Blue";
+		this.name = "LCD Screen";
 	}
 	
 	/**
@@ -45,36 +43,13 @@ public class LcdScreen extends Device {
 		// TODO Auto-generated method stub
 		
 	}
+	
 	@Override
 	public boolean isAvailable(Device device, String portNumber) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 	
-	/**
-	 * 
-	 * @return
-	 */
-	public String getPortNumber() {
-		return portNumber;
-	}
-
-	/**
-	 * 
-	 * @param portNumber
-	 */
-	public void setPortNumber(String portNumber) {
-		this.portNumber = portNumber;
-	}
-
-	/**
-	 * 
-	 * @return
-	 */
-	public Device getNextDevice() {
-		return nextDevice;
-	}
-
 	/**
 	 * 
 	 * @return
@@ -107,20 +82,5 @@ public class LcdScreen extends Device {
 		this.color = color;
 	}
 
-	/**
-	 * 
-	 * @return
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * 
-	 * @param name
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
 	//TODO implement object equality and hashCode
 }
