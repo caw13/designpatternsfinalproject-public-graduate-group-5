@@ -46,9 +46,14 @@ public class TemperatureAndHumiditySensor implements Sensor {
 	 * Returns the next sensor in the chain 
 	 * @return
 	 */
-	public Sensor getSensor() {
+	public Sensor getNextSensor() {
 		return nextSensor;
+	}
+
+	@Override
+	public boolean isAvailable(Sensor sensor) {
+		// TODO Auto-generated method stub
+		return false;
 	}	
-	
-	
+	//TODO implement object equality and hashCode
 }
