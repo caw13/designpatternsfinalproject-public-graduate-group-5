@@ -1,8 +1,6 @@
 package edu.ccsu.interfaces;
 /**
- * 
- * @author Adrian
- *
+ * Interface that specifies operations on Sensors
  */
 public interface Sensor {
 

@@ -1,6 +1,6 @@
 package edu.ccsu.interfaces;
 /**
- * 
+ * Abstract class that specifies operations on Devices
  */
 public abstract class Device {
 

@@ -2,6 +2,11 @@ package edu.ccsu.sensors;
 
 import edu.ccsu.interfaces.Sensor;
 
+/***
+ * Temperature and humidity sensor that reads data from
+ * the GrovePi temp/humidity sensor and returns that data
+ *
+ */
 public class TemperatureAndHumiditySensor implements Sensor {
 
 	private Sensor nextSensor;

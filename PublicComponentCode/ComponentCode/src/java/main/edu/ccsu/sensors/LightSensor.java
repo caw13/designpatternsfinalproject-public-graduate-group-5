@@ -2,11 +2,16 @@ package edu.ccsu.sensors;
 
 import edu.ccsu.interfaces.Sensor;
 
+/**
+ * Class can access light sensor and 
+ * get the light intensity
+ */
 public class LightSensor implements Sensor {
 
 	private Sensor nextSensor;
 	private String name;
 	private String portNumber;
+	private double lightIntensity;
 	
 	public LightSensor(String name) {
 		this.name = name;
